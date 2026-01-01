@@ -31,9 +31,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Configure locales
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
     locale-gen
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8  
+ENV LANGUAGE=en_US:en  
+ENV LC_ALL=en_US.UTF-8
 
 # Parquet
 RUN wget https://packages.apache.org/artifactory/arrow/debian/apache-arrow-apt-source-latest-bookworm.deb && apt install -y -V ./apache-arrow-apt-source-latest-bookworm.deb && rm -f ./apache-arrow-apt-source-latest-bookworm.deb
@@ -78,8 +78,8 @@ ENV PATH=$PATH:/usr/local/share/npm-global/bin
 ENV SHELL=/bin/zsh
 
 # Set the default editor and visual
-ENV EDITOR nano
-ENV VISUAL nano
+ENV EDITOR=nano
+ENV VISUAL=nano
 
 # Default powerline10k theme
 ARG ZSH_IN_DOCKER_VERSION=1.2.0

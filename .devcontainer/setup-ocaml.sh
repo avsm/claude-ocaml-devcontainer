@@ -54,9 +54,7 @@ echo "Initialising OxCaml..."
 opam switch create 5.2.0+ox --repos ox=git+https://github.com/oxcaml/opam-repository.git,default
 eval $(opam env --switch 5.2.0+ox)
 opam install -y \
-  async_parallel \
-  ocaml-lsp-server \
-  utop
+  async ocamlformat merlin ocaml-lsp-server utop core parallel
 
 opam switch default
 eval $(opam env)
