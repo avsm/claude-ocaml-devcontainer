@@ -134,7 +134,7 @@ jobs:
         env:
           DOCKER_BUILDKIT: 1
         with:
-          context: .
+          context: .devcontainer
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           annotations: ${{ steps.meta.outputs.annotations }}
