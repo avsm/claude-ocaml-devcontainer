@@ -67,6 +67,9 @@ RUN ARCH=$(dpkg --print-architecture) && \
   sudo dpkg -i "git-delta_${GIT_DELTA_VERSION}_${ARCH}.deb" && \
   rm "git-delta_${GIT_DELTA_VERSION}_${ARCH}.deb"
 
+ADD https://raw.githubusercontent.com/newren/git-filter-repo/refs/heads/main/git-filter-repo /usr/bin/git-filter-repo
+RUN chmod a+x /usr/bin/git-filter-repo
+
 # Set up non-root user
 USER node
 
