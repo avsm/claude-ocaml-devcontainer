@@ -1,5 +1,6 @@
 {
   "name": "Claude Code OCaml Sandbox",
+  "image": "ghcr.io/avsm/claude-ocaml-devcontainer:main",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
