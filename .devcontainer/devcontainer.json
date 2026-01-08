@@ -55,6 +55,6 @@
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",
-  "postCreateCommand": "/usr/local/bin/setup-ocaml.sh && sudo /usr/local/bin/init-firewall.sh",
+  "postCreateCommand": "sudo /usr/local/bin/init-firewall.sh",
   "waitFor": "postStartCommand"
 }

@@ -1,6 +1,6 @@
 FROM node:20
 
-ARG TZ
+ARG TZ="Europe/London"
 ENV TZ="$TZ"
 
 ARG CLAUDE_CODE_VERSION=latest
