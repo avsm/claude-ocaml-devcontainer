@@ -14,7 +14,8 @@ sudo apt-get install -y \
     ripgrep \
     vim \
     pkg-config \
-    libgmp-dev
+    libgmp-dev \
+    afl++
 
 echo "Initializing opam..."
 opam init --disable-sandboxing -y
@@ -28,27 +29,19 @@ opam install -y \
     ocamlformat \
     odoc \
     utop \
-    cohttp-eio \
-    tls-eio \
-    progress \
-    decompress \
-    eio_main \
-    ezjsonm \
     decompress \
     zarith \
     re \
-    ca-certs \
-    syndic \
+    cmdliner \
+    fmt \
     alcotest \
+    crowbar \
     ctypes \
     ctypes-foreign \
-    lambdasoup \
-    cmarkit \
-    yaml \
-    jekyll-format \
     jsont \
     bytesrw 
 
+opam clean -a
 echo "Initialising OxCaml..."
 
 opam switch create 5.2.0+ox --repos ox=git+https://github.com/oxcaml/opam-repository.git,default
@@ -56,6 +49,7 @@ eval $(opam env --switch 5.2.0+ox)
 opam install -y \
   async ocamlformat merlin ocaml-lsp-server utop core parallel
 
+opam clean -a
 opam switch default
 eval $(opam env)
 
