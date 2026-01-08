@@ -1,15 +1,6 @@
 {
   "name": "Claude Code OCaml Sandbox",
   "image": "ghcr.io/avsm/claude-ocaml-devcontainer:main",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "TZ": "${localEnv:TZ:Europe/London}",
-      "CLAUDE_CODE_VERSION": "latest",
-      "GIT_DELTA_VERSION": "0.18.2",
-      "ZSH_IN_DOCKER_VERSION": "1.2.0"
-    }
-  },
   "runArgs": [
     "--cap-add=NET_ADMIN",
     "--cap-add=NET_RAW"
