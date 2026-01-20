@@ -18,7 +18,7 @@ sudo apt-get install -y \
     afl++
 
 echo "Initializing opam..."
-opam init --disable-sandboxing -y
+opam init -c 5.4.0 --disable-sandboxing -y
 eval $(opam env)
 
 echo "Installing OCaml LSP server and common tools..."
