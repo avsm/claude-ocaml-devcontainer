@@ -36,7 +36,7 @@ ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
 
 # Parquet
-RUN wget https://packages.apache.org/artifactory/arrow/debian/apache-arrow-apt-source-latest-bookworm.deb && apt install -y -V ./apache-arrow-apt-source-latest-bookworm.deb && rm -f ./apache-arrow-apt-source-latest-bookworm.deb
+RUN wget https://packages.apache.org/artifactory/arrow/debian/apache-arrow-apt-source-latest-trixie.deb && apt install -y -V ./apache-arrow-apt-source-latest-trixie.deb && rm -f ./apache-arrow-apt-source-latest-trixie.deb
 RUN apt update
 RUN apt install -y libarrow-dev libparquet-dev
 
