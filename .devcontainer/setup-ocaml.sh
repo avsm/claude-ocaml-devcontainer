@@ -50,7 +50,7 @@ opam install -y \
   async ocamlformat merlin ocaml-lsp-server utop core parallel
 
 opam clean -a
-opam switch default
+opam switch 5.4.0
 eval $(opam env)
 
 echo "Setting up shell environment..."
